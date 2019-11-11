@@ -10,7 +10,7 @@ def mkdir(path):
 	else:
 		return 1
 
-ck = input('请宁输入宁的 Cookie: ')
+ck = input('请宁输入宁的 Cookie: \n')
 ck = 'PHPSESSID=' + ck
 
 while True :
@@ -18,7 +18,7 @@ while True :
         ttt = ''
         sin = ''
         sout = ''
-        url = input('输入一个题目网址: ')
+        url = input('输入一个题目网址: \n')
         siflag = False
         soflag = False
         heder = {
