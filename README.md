@@ -1,5 +1,5 @@
 # OpenJudge
-### OpenJudge & SDUST OJ 题目收集
+### OpenJudge & OJ 题目收集
 ---
 ### 提交说明
 
