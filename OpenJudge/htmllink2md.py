@@ -58,11 +58,11 @@ while True :
             elif tt[i] in ['Sample Output']:
                 siflag =False
                 soflag = True
-                ttt = ttt + '```\n\n## ' + tt[i] + '\n```\n'
+                ttt = ttt + '\n```\n\n## ' + tt[i] + '\n```\n'
                 continue
             elif tt[i] in ['HINT']:
                 soflag = False
-                ttt = ttt + '```\n\n## ' + tt[i] + '\n'
+                ttt = ttt + '\n```\n\n## ' + tt[i] + '\n'
                 continue
             elif tt[i] in ['Append Code']:
                 ttt = ttt + '\n\n## ' + tt[i] + '\n'
