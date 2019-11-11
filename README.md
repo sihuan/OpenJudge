@@ -1,5 +1,5 @@
-# SDUST_OJ
-### 山东科技大学 OpenJudge 项目 && 山东科技大学 OnlineJudge 题目
+# OpenJudge
+### OpenJudge 项目 && 山东科技大学 OnlineJudge 题目收集
 ---
 ### 提交说明
 
