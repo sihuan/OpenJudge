@@ -37,6 +37,7 @@ case i:d1 d2 ... dj
 每个平均值用%lg输出即可。
 
 ## Sample Input
+```
 4
 3 3
 1 2 3
@@ -53,11 +54,15 @@ case i:d1 d2 ... dj
 5
 6
 7
+```
 ## Sample Output
+```
 case 1:1 2 3
 case 2:1 1 1
 case 3:1
 case 4:5
+```
+
 ## HINT
   “Append Code”中用到的头文件、全局变量或宏的定义应自行补充。
 

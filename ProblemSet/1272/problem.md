@@ -21,9 +21,13 @@ int digits(int n);
 输出num有多少位十进制数字。
 
 ## Sample Input
+```
 1000
+```
 ## Sample Output
+```
 4
+```
 
 ## Append Code
 ### append.c
