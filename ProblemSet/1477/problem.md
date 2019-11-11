@@ -56,7 +56,7 @@ int main()
 }
 ```
 ### append.cc
-```
+```cpp
 int main()
 {
     int n;
