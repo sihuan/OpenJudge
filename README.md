@@ -1,5 +1,5 @@
 # OpenJudge
-### OpenJudge && SDUST OJ 题目收集
+### OpenJudge & SDUST OJ 题目收集
 ---
 ### 提交说明
 
@@ -21,9 +21,9 @@
 ### TODO
 + 收集 OJ 题目
 + 新建题目脚本 /OpenJudge/newproblem
-+ 判断题目脚本 /OpenJudge/newproblem
++ 判断题目脚本 /OpenJudge/judge
 + Web 端
-+ 面向语义判题
++ ~~面向语义判题~~
 
-### 大坑 面向语义判题
-+ C -> OESPA
+~~### 大坑 面向语义判题~~
+~~+ C -> OESPA~~
