@@ -1,0 +1,28 @@
+# SDUST_OJ
+### 山东科技大学 OpenJudge 项目 && 山东科技大学 OnlineJudge 题目
+---
+### 提交说明
+
+#### 提交题目
+将题目描述提交至  /ProblemSet/*题号*/problem.md
+
+格式仿照 [1272.md](https://github.com/Si-Huan/OpenJudge/blob/master/problem/1272.md)
+
+然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件
+
+#### 提交题解
+将题解提交至 *yourname* 目录下，文件名为 *题号*.*c*
+
+提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例
+
+### 加入
+详见 /Start/start.md
+
+### TODO
++ 新建题目 /OpenJudge/newproblem
++ 判断题目 /OpenJudge/newproblem
++ Web 端
++ 面向语义判题
+
+### 大坑 面向语义判题
++ C -> OESPA
