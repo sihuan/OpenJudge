@@ -12,3 +12,6 @@ int main() {
   scanf("%d", &num);
   printf("%d\n", digits(num));
 }
+/*
+Accepted
+*/
