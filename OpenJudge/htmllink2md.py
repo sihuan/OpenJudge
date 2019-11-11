@@ -10,14 +10,15 @@ def mkdir(path):
 	else:
 		return 1
 
-ck = input()
+ck = input('请宁输入宁的 Cookie: ')
+ck = 'PHPSESSID=' + ck
 
 while True :
     try :
         ttt = ''
         sin = ''
         sout = ''
-        url = input()
+        url = input('输入一个题目网址: ')
         siflag = False
         soflag = False
         heder = {
@@ -27,7 +28,9 @@ while True :
         html = etree.HTML(res.content.decode("utf-8"))
         id = html.xpath('//*[@id="main"]/center[2]/a[2]/@href')[0][21:]
         path = '../ProblemSet/' + id
+        print('开始创建 '+id+ '题 :)\n')
         if mkdir(path) == 1:
+            print('题目已经存在咯！\n')
             continue
         tt = html.xpath('//div[@id="main"]/descendant::*/text()')
         tt = tt[:len(tt)-31]
@@ -78,11 +81,16 @@ while True :
         problemfile = open(path+'/problem.md','w')
         problemfile.write(ttt)
         problemfile.close()
+        prinf('  -完成 题目描述 文件\n')
         inputfile = open(path+'/input','w')
         inputfile.write(sin)
         inputfile.close()
+        prinf('  -完成 样例输入 文件\n')
         outputfile = open(path+'/output','w')
         outputfile.write(sout)
         outputfile.close()
+        prinf('  -完成 样例输出 文件\n')
+        prinf(id + ' OK！\n')
+
     except :
         break
