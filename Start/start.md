@@ -5,6 +5,9 @@
 1. 第一条被 yyk 吃了
 2. 克隆仓库到本地
 3. 使用 /OpenJudge/htmllink2md.py 自动提交您的题目
-
+```bath
+python ./OpenJudge.htmllink2md.py
+```
+请按照提示输入
 
 # 全是待办
