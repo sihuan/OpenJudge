@@ -1,0 +1,61 @@
+SDUSTOJ Online Judge FAQ
+Q:What is the compiler the judge is using and what are the compiler options?
+A:The online judge system is running on Debian Linux. We are using GNU GCC/G++ for C/C++ compile, Free Pascal for pascal compile and sun-java-jdk1.6 for Java. The compile options are:
+C:		gcc Main.c -o Main -O2 -Wall -lm --static -std=c99 -DONLINE_JUDGE
+C++:	g++ Main.cc -o Main -O2 -Wall -lm --static -DONLINE_JUDGE
+Pascal:	fpc Main.pas -oMain -O1 -Co -Cr -Ct -Ci
+Java:	javac -J-Xms32m -J-Xmx256m Main.java 
+*Java has 2 more seconds and 512M more memory when running and judging.
+Our compiler software version:
+gcc (Ubuntu/Linaro 4.4.4-14ubuntu5) 4.4.5
+glibc 2.3.6
+Free Pascal Compiler version 2.4.0-2 [2010/03/06] for i386
+java version "1.6.0_22"
+
+Q:Where is the input and the output?
+A:Your program shall read input from stdin('Standard Input') and write output to stdout('Standard Output').For example,you can use 'scanf' in C or 'cin' in C++ to read from stdin,and use 'printf' in C or 'cout' in C++ to write to stdout.
+User programs are not allowed to open and read from/write to files, you will get a "Runtime Error" if you try to do so.
+
+Here is a sample solution for problem 1000 using C++:
+#include 
+using namespace std;
+int main(){
+    int a,b;
+    while(cin >> a >> b)
+        cout << a+b << endl;
+	return 0;
+}
+
+Here is a sample solution for problem 1000 using C:
+#include 
+int main(){
+    int a,b;
+    while(scanf("%d %d",&a, &b) != EOF)
+        printf("%d\n",a+b);
+	return 0;
+}
+
+Here is a sample solution for problem 1000 using PASCAL:
+program p1001(Input,Output); 
+var 
+  a,b:Integer; 
+begin 
+   while not eof(Input) do 
+     begin 
+       Readln(a,b); 
+       Writeln(a+b); 
+     end; 
+end.
+
+Here is a sample solution for problem 1000 using Java:
+import java.util.*;
+public class Main{
+	public static void main(String args[]){
+		Scanner cin = new Scanner(System.in);
+		int a, b;
+		while (cin.hasNext()){
+			a = cin.nextInt(); b = cin.nextInt();
+			System.out.println(a + b);
+		}
+	}
+}
