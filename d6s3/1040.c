@@ -1,6 +1,6 @@
 #include <math.h>
 #include <stdio.h>
- 
+
 int eq(double a, double b)
 {
     if (fabs(a - b) < 0.000001)
@@ -8,7 +8,7 @@ int eq(double a, double b)
     else
         return 0;
 }
- 
+
 void prtfc(double a, double b, double c)
 {
     int f;
@@ -38,7 +38,7 @@ void prtfc(double a, double b, double c)
         printf(" - %lg = 0", fabs(c));
     printf("\n");
 }
- 
+
 void prtg(double a, double b, double c)
 {
     double d = b * b - 4 * a * c;
@@ -78,7 +78,7 @@ void prtg(double a, double b, double c)
         printf("\n");
     }
 }
- 
+
 int main()
 {
     int i = 1;
@@ -93,3 +93,12 @@ int main()
         printf("\n");
     }
 }
+/**************************************************************
+	Problem: 1040
+	User: 201901060610
+	Language: C
+	Result: Accepted
+	Time:0 ms
+	Memory:760 kb
+****************************************************************/
+
