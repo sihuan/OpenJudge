@@ -76,12 +76,12 @@ def main(arg):
         name = input('Your username:')
         ck = input('PHPSESSID=')
         ck = 'PHPSESSID=' + ck
-        path = name
-        mkdir(path)
-        codeUrls = getCodeUrl(sid, ck)
-        # print(codeUrls)
-        for url in codeUrls:
-            mkCode(url, ck, path)
+    path = name
+    mkdir(path)
+    codeUrls = getCodeUrl(sid, ck)
+    # print(codeUrls)
+    for url in codeUrls:
+        mkCode(url, ck, path)
 
 
 main(sys.argv)
