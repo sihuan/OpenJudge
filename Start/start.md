@@ -4,10 +4,14 @@
 0. 联系 || 加入我们
 1. 第一条被 yyk 吃了
 2. 克隆仓库到本地
-3. 使用 /OpenJudge/htmllink2md.py 自动提交您的题目
-```bath
-python ./OpenJudge.htmllink2md.py
+3. 使用 ~~/OpenJudge/htmllink2md.py~~ oh-my-problem 自动提交您的题目
 ```
-请按照提示输入
+python ./OpenJudge/oh-my-problem.py *your cookie PHPSESSID's value*
 
-# 全是待办
+OR
+
+python ./OpenJudge/oh-my-problem.py
+
+按照提示输入
+```
+# OK 大完工
