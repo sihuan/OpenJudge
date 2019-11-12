@@ -25,21 +25,28 @@ int count_sum(int arr[], int mtx[][MAX_SIZE], int m, int n) {
     }
   }
 }
-//以上 submit
 
-int main() {
-  int i, cases, sum[MAX_SIZE];
-  int m, n, matrix[MAX_SIZE][MAX_SIZE];
-  scanf("%d", &cases);
-  for (i = 1; i <= cases; i++) {
-    scanf("%d%d", &m, &n);
-    get_matrix(matrix, m, n);
-    count_sum(sum, matrix, m, n);
-    printf("case %d:", i);
-    put_array(sum, m);
-  }
-  return 0;
+int main()
+{
+    int i, cases, sum[MAX_SIZE];
+    int m, n, matrix[MAX_SIZE][MAX_SIZE];
+    scanf("%d", &cases);
+    for(i = 1; i <= cases; i++)
+    {
+        scanf("%d%d", &m, &n);
+        get_matrix(matrix, m, n);
+        count_sum(sum, matrix, m, n);
+        printf("case %d:", i);
+        put_array(sum, m);
+    }
+    return 0;
 }
-/*
-AC
-*/
+/**************************************************************
+	Problem: 1586
+	User: 201801011012
+	Language: C
+	Result: Accepted
+	Time:8 ms
+	Memory:748 kb
+****************************************************************/
+

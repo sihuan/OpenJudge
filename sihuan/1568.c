@@ -11,15 +11,20 @@ void str_trans(char s[]) {
     }
   }
 }
-//以上 submit
-
-int main() {
-  char s[101];
+#include <stdio.h>
+int main()
+{ char s[101];
   gets(s);
   str_trans(s);
   puts(s);
   return 0;
 }
-/*
-AC
-*/
+/**************************************************************
+	Problem: 1568
+	User: 201801011012
+	Language: C
+	Result: Accepted
+	Time:0 ms
+	Memory:748 kb
+****************************************************************/
+

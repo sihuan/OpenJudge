@@ -19,20 +19,27 @@ long long fibonacci(int n) {
   }
   return returnVal;
 }
-//以上 submit
 
-int main() {
-  int n;
-  long long fib;
-  while (scanf("%d", &n) != EOF) {
-    fib = fibonacci(n);
-    if (fib == OVERFLOW)
-      puts("overflow");
-    else
-      printf("%lld\n", fib);
-  }
-  return 0;
+int main()
+{
+    int n;
+    long long fib;
+    while(scanf("%d", &n) != EOF)
+    {
+        fib = fibonacci(n);
+        if(fib == OVERFLOW)
+            puts("overflow");
+        else
+            printf("%lld\n", fib);
+    }
+    return 0;
 }
-/*
-AC
-*/
+/**************************************************************
+	Problem: 1477
+	User: 201801011012
+	Language: C
+	Result: Accepted
+	Time:0 ms
+	Memory:748 kb
+****************************************************************/
+

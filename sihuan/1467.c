@@ -27,23 +27,29 @@ int count_average(double arr[], int mtx[][MAX_SIZE], int m, int n) {
     arr[i] = ((double)sum) / m;
   }
 }
-//以上 submit
 
-int main() {
-  int i, cases;
-  double average[MAX_SIZE];
-  int m, n, matrix[MAX_SIZE][MAX_SIZE];
-  scanf("%d", &cases);
-  for (i = 1; i <= cases; i++) {
-    scanf("%d%d", &m, &n);
-    get_matrix(matrix, m, n);
-    count_average(average, matrix, m, n);
-    printf("case %d:", i);
-    put_array(average, n);
-  }
-  return 0;
+int main()
+{
+    int i, cases;
+    double average[MAX_SIZE];
+    int m, n, matrix[MAX_SIZE][MAX_SIZE];
+    scanf("%d", &cases);
+    for(i = 1; i <= cases; i++)
+    {
+        scanf("%d%d", &m, &n);
+        get_matrix(matrix, m, n);
+        count_average(average, matrix, m, n);
+        printf("case %d:", i);
+        put_array(average, n);
+    }
+    return 0;
 }
+/**************************************************************
+	Problem: 1467
+	User: 201801011012
+	Language: C
+	Result: Accepted
+	Time:4 ms
+	Memory:748 kb
+****************************************************************/
 
-/*
-Accepted
-*/
