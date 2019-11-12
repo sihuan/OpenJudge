@@ -23,7 +23,7 @@ def getProNum(con,ck):
 	url = 'http://cise.sdust.edu.cn/OJ/contest.php?cid=' + con
 	res = requests.get(url=url,headers=heder)
 	html = etree.HTML(res.content.decode("utf-8"))
-	urls = html.xpath('//center[1]//td/a/@href')
+	urls = html.xpath('//center/table/tr/td/a/@href')
 	return urls
 	
 	
@@ -40,8 +40,12 @@ def mkProblem(url,ck):
         res = requests.get(url=url,headers=heder)
         html = etree.HTML(res.content.decode("utf-8"))
         tt = html.xpath('//div[@id="main"]/descendant::*/text()')
-        id = html.xpath('//*[@id="main"]/center[2]/a[2]/@href')[0][21:]
-        path = '../ProblemSet/' + id
+        try:
+            id = html.xpath('//*[@id="main"]/center[2]/a[2]/@href')[0][21:]
+        except:
+            return 0;
+        path = './ProblemSet/' + id
+        print("更新" + path)
         mkdir(path)
         tt = tt[:len(tt)-31]
         # print(tt)
