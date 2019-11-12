@@ -13,11 +13,12 @@
 使用 oh-my-problem 脚本自动生成
 
 #### 提交题解
-将题解提交至 *yourname* 目录下，文件名为 *题号*.*c*
+~~将题解提交至 *yourname* 目录下，文件名为 *题号*.*c*~~
 
-提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例
+~~提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例~~
 
-todo: oh-my-code 自动提交 
+~~todo:~~ oh-my-code 自动提交  OK!
+现在可以使用 oh-my-code
 
 ### 加入
 Please Read /Start/start.md
