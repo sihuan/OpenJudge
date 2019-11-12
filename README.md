@@ -16,7 +16,7 @@
 提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例
 
 ### 加入
-详见 /Start/start.md
+Please Read /Start/start.md
 
 ### TODO
 + 收集 OJ 题目
