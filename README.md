@@ -4,16 +4,20 @@
 ### 提交说明
 
 #### 提交题目
-将题目描述提交至  /ProblemSet/*题号*/problem.md
+~~将题目描述提交至  /ProblemSet/*题号*/problem.md
 
 格式仿照 [1272/problem.md](https://github.com/Si-Huan/OpenJudge/blob/master/ProblemSet/1272/problem.md)
 
-然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件
+然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件~~
+
+使用 oh-my-problem 脚本自动生成
 
 #### 提交题解
 将题解提交至 *yourname* 目录下，文件名为 *题号*.*c*
 
 提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例
+
+todo: oh-my-code 自动提交 
 
 ### 加入
 Please Read /Start/start.md
