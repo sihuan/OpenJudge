@@ -4,11 +4,11 @@
 ### 提交说明
 
 #### 提交题目
-~~将题目描述提交至  /ProblemSet/*题号*/problem.md
+~~将题目描述提交至  /ProblemSet/*题号*/problem.md~~
 
-格式仿照 [1272/problem.md](https://github.com/Si-Huan/OpenJudge/blob/master/ProblemSet/1272/problem.md)
+~~格式仿照 [1272/problem.md](https://github.com/Si-Huan/OpenJudge/blob/master/ProblemSet/1272/problem.md)~~
 
-然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件~~
+~~然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件~~
 
 使用 oh-my-problem 脚本自动生成
 
