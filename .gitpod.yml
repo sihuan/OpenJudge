@@ -1,1 +1,1 @@
-image: archlinux:latest
+image: shadowsocks/shadowsocks-libev
