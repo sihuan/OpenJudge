@@ -1,0 +1,6 @@
+vscode:
+  extensions:
+    - ms-vscode.cpptools@0.26.1:bxNzDqLdBImvpbNCCeU8Ug==
+    - ms-python.python@2019.10.44104:fKYRb8X8FA37fMd+hgvv2A==
+
+image: archlinux
