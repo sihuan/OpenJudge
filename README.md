@@ -14,10 +14,10 @@
 
 ### 使用仓库中的样例文件(用处有限)
 C 语言，gcc，Linux  
-gcc *code*.c -o *exec*
-./exec < input > *youroutput*
+gcc *code*.c -o *exec*  
+./*exec* < input > *youroutput*  
 使用工具对比 *youroutput* 与 output 文件  
-** 我们会制作一个自动化的脚本来实现这个功能 ～咕咕咕～ **
+**我们会制作一个自动化的脚本来实现这个功能 咕咕咕**
 
 ### 如何贡献
 1. 注册 Github 账号
