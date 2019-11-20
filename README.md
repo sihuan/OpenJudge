@@ -1,34 +1,28 @@
 # OpenJudge
-### OpenJudge & OJ 题目收集
----
-### 提交说明
+### 简介
+收集 OJ 的题目  
+归档 AC 代码
 
-#### 提交题目
-~~将题目描述提交至  /ProblemSet/*题号*/problem.md~~
+### 目录结构
+`/Openjudge` 目录下是为了方便大家贡献自己的代码或者自己访问到的题目所编写的脚本，以及未来会添加的判题脚本。
 
-~~格式仿照 [1272/problem.md](https://github.com/Si-Huan/OpenJudge/blob/master/ProblemSet/1272/problem.md)~~
+`/ProblemSet` 目录下是收集到的所有题目，题号目录下有三个文件 `problem.md` 、 `input` 、 `output`. 分别是题目描述，样例输入，样例输出。  
 
-~~然后运行 /OpenJudge/newproblem 以提取样例生成 input 与 output 文件~~
+`/Start` 目录下是一些使用帮助之类的  
 
-使用 oh-my-problem 脚本自动生成
+其余文件夹均为各位同学贡献的 AC 代码和一些笔记。  
 
-#### 提交题解
-~~将题解提交至 *yourname* 目录下，文件名为 *题号*.*c*~~
+### 使用仓库中的样例文件(用处有限)
+C 语言，gcc，Linux  
+gcc *code*.c -o *exec*
+./exec < input > *youroutput*
+使用工具对比 *youroutput* 与 output 文件  
+** 我们会制作一个自动化的脚本来实现这个功能 ～咕咕咕～ **
 
-~~提交之前应该运行 /OpenJudge/judge 以判断并在源文件中自动标注是否通过样例~~
-
-~~todo:~~ oh-my-code 自动提交  OK!
-现在可以使用 oh-my-code
-
-### 加入
-Please Read /Start/start.md
-
-### TODO
-+ 收集 OJ 题目
-+ 新建题目脚本 /OpenJudge/newproblem
-+ 判断题目脚本 /OpenJudge/judge
-+ Web 端
-+ ~~面向语义判题~~
-
-### ~~大坑 面向语义判题~~
-+ ~~C -> OESPA~~
+### 如何贡献
+1. 注册 Github 账号
+2. Fork 本仓库到自己的账号
+3. 克隆你 Fork 的仓库到本地
+4. 添加题目或题解或笔记
+5. 提交、Push
+6. 提交 PR ，等待合并
