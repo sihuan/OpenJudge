@@ -92,6 +92,7 @@ def main(arg):
     mkdir(path)
     for lan in ['c', 'c++']:
         codeUrls = getCodeUrl(sid, ck, lan)
+        codeUrls = codeUrls[::-1]
         # return 1
         # print(codeUrls)
         for url in codeUrls:

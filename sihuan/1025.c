@@ -1,14 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 int main() {
-  int n;
-  while (scanf("%d", &n) != EOF) {
-    if (n == 100) {
-      printf("Excellent\n");
-    } else if (n < 0 || n > 100) {
+  int t;
+  while (scanf("%d", &t) != EOF) {
+    if (t < 0 || t > 100) {
       printf("Error\n");
+      continue;
     } else {
-      switch (n / 10) {
+      t /= 10;
+      switch (t) {
+        case 10:
+          printf("Excellent\n");
+          break;
         case 9:
           printf("Excellent\n");
           break;
@@ -27,6 +29,7 @@ int main() {
       }
     }
   }
+  return 0;
 }
 /**************************************************************
 	Problem: 1025
