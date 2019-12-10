@@ -1,0 +1,5 @@
+Bill_Gates:Jackson,Mammal_1,Jack
+Tom       :NONE!
+Jackson   :Bill_Gates,Mammal_1
+Mammal_1  :NONE!
+Jack      :Tom
