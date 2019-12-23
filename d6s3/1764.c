@@ -1,24 +1,26 @@
 #include <stdio.h>
 
-int js, s;
+int s;
 
-int qh(void)
+int qh(int k)
 {
-    int a;
-    scanf("%d", &a);
-    s += a;
-    js--;
-    if (js == 0)
-        return s;
-    else
-        return qh();
+    int n;
+    if(k==0){
+        printf("%d", s);
+        return 1;
+    }
+    scanf("%d", &n);
+    s += n;
+    return qh(k-1);
 }
 
 int main()
 {
-    scanf("%d", &js);
-    printf("%d", qh());
+    int k;
+    scanf("%d", &k);
+    qh(k);
 }
+
 /**************************************************************
 	Problem: 1764
 	User: 201901060610

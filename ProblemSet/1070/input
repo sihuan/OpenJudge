@@ -1,0 +1,19 @@
+{class(Point) 
+{
+ member ( int ( x ) ) ; member ( int ( y ) ) ;
+ member ( fun ( Length )  
+ {
+   return ( sqrt ( sum ( sqr ( x ),sqr ( y ) ) ) );
+ } ) ;
+};
+Main 
+{
+ repeat 
+ {
+   set ( n,input ( int ) ) ;
+   for ( int ( i,0 ) , lt ( i,n ) , inc ( i ) ) 
+   {
+     print ( mult ( n,n ) ) ;
+   };
+ };
+}; }

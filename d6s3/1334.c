@@ -1,7 +1,9 @@
+//Leo's
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+ 
 int main()
 {
     int N, i = 0, j, l, m;
@@ -32,7 +34,7 @@ int main()
 	User: 201901060610
 	Language: C
 	Result: Accepted
-	Time:6464 ms
-	Memory:1352 kb
+	Time:6496 ms
+	Memory:1356 kb
 ****************************************************************/
 

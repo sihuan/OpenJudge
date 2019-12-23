@@ -1,21 +1,19 @@
 #include <stdio.h>
 
-unsigned long long f(int n)
+unsigned long long hanoi(int n)
 {
-    if (n <= 0)
-        return 0;
-    if (n == 1)
+    if(n==1)
         return 1;
-    return 2 * f(n - 1) + 1;
+    return 2*hanoi(n-1)+1;
 }
 
 int main()
 {
-    unsigned long long n, i, j, k;
-    scanf("%llu", &n);
-    printf("%llu", f(n));
-    return 0;
+    int n;
+    scanf("%d", &n);
+    printf("%llu", hanoi(n));
 }
+
 /**************************************************************
 	Problem: 1769
 	User: 201901060610

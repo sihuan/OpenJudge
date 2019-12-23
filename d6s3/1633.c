@@ -1,17 +1,17 @@
 #include <stdio.h>
-
+ 
 int jc(int n)
 {
     if (n == 0)
         return 1;
     return n * jc(n - 1);
 }
-
+ 
 int c(int m, int n)
 {
     return (jc(n) / (jc(m) * jc(n - m)));
 }
-
+ 
 int main()
 {
     int n, i, j, a = 0;
