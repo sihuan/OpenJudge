@@ -13,6 +13,7 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>OpenJudge Search</title>
 </head>
 
@@ -39,9 +40,9 @@
                     </div>
                 </div>
 
-                <pre><code class="markdown">
-                    {{ problem }}
-                </code></pre>
+                <div>
+                    <span v-html="problem"></span>
+                </div>
 
                 <div v-for='c in codes' class="mdui-card">
                     <!-- 卡片的标题和副标题 -->
@@ -95,7 +96,7 @@
                     this.codes = []
 
                     axios.get(this.baseurl + 'ProblemSet/' + this.problemcode + '/' + 'problem.md').then(
-                        (response => (this.problem = response.data))
+                        (response => (this.problem = marked(response.data)))
                     )
 
                     if (this.problem == '') {
