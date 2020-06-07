@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/mdui.min.css">
+    <script src="./static/js/mdui.min.js"></script>
+    <script src="./static/js/vue.js"></script>
+    <!-- <script src="./static/js/axios.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href="./static/favicon.ico">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+    <title>OpenJudge Search</title>
+</head>
+
+<body class="mdui-theme-primary-teal mdui-theme-accent-teal">
+    <div class="mdui-toolbar mdui-color-teal-100" style="margin-bottom:50px">
+        <div class="mdui-toolbar-spacer"></div>
+        <span class="mdui-typo-title"><a href="https://github.com/Si-Huan/OpenJudge">OpenJudge Search</a></span>
+        <div class="mdui-toolbar-spacer"></div>
+    </div>
+    <div id="app" class="mdui-container">
+        <div class="mdui-row">
+            <div class="mdui-col-12">
+                <div class="mdui-card" style="padding: 10px;">
+                    <div :class="{ 'mdui-textfield-invalid': status=='-1'}"
+                        class="mdui-textfield mdui-textfield-floating-label">
+                        <i class="mdui-icon material-icons">search</i>
+                        <label class="mdui-textfield-label">题号</label>
+                        <input v-model="problemcode" class="mdui-textfield-input" type="text" />
+                        <div v-if="status=='-1'" class="mdui-textfield-error">查不到这个学号！</div>
+                        <div class="mdui-textfield-helper">请输入4位题号</div>
+                    </div>
+                    <div class="mdui-card-actions">
+                        <button @click="search" class="mdui-btn mdui-ripple mdui-color-teal-300">Search</button>
+                    </div>
+                </div>
+
+                <pre><code class="markdown">
+                    {{ problem }}
+                </code></pre>
+
+                <div v-for='c in codes' class="mdui-card">
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">{{ problemcode }}.{{ c.lang }}</div>
+                        <div class="mdui-card-primary-subtitle">by {{ c.name }}</div>
+                    </div>
+
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content">
+                        <pre><code :class="c.lang">
+                            {{ c.code }}
+                        </code></pre>
+                    </div>
+
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions">
+                        <button @click="copy(c.code)" class="mdui-btn mdui-ripple">Copy</button>
+                        <!-- <button class="mdui-btn mdui-ripple">action 2</button> -->
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        app = new Vue({
+            el: "#app",
+            data: {
+                status: "0",
+                problemcode: '',
+                codes: [],
+                problem: "",
+                we: ['cyd', 'czy', 'd6s3', 'fhy', 'mocyree', 'rs_learner', 'sihuan', 'weilinfox', 'wfb', 'wpl'],
+                baseurl: "https://cdn.jsdelivr.net/gh/Si-Huan/OpenJudge@master/",
+            },
+            methods: {
+                copy: function (code) {
+                    var aux = document.createElement("input");
+                    aux.setAttribute("value", code);
+                    document.body.appendChild(aux);
+                    aux.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(aux);
+                },
+                search: function () {
+                    // this.problem =''
+                    this.codes = []
+
+                    axios.get(this.baseurl + 'ProblemSet/' + this.problemcode + '/' + 'problem.md').then(
+                        (response => (this.problem = response.data))
+                    )
+
+                    if (this.problem == '') {
+                        this.status == '-1'
+                        return
+                    }
+
+                    this.we.forEach(one => {
+                        url = this.baseurl + one + '/' + this.problemcode + '.c'
+                        axios.get(url)
+                            .then((response => (this.codes.push({
+                                'name': one,
+                                'lang': 'c',
+                                'code': response.data
+                            }))))
+                    });
+                    this.we.forEach(one => {
+                        url = this.baseurl + one + '/' + this.problemcode + '.cc'
+                        axios.get(url)
+                            .then((response => (this.codes.push({
+                                'name': one,
+                                'lang': 'cc',
+                                'code': response.data
+                            }))))
+                    });
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>
