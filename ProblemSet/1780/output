@@ -1,0 +1,13 @@
+A student named by Tom is created!
+A student cadre with position Monitor is created.
+A student named by Jack is created!
+A student named by Mary is created!
+A student named by Sherry is created!
+name = Tom, sex = 0, grade = 2015; position = Monitor.
+name = Jack, sex = 1, grade = 2015;
+name = Mary, sex = 0, grade = 2015;
+name = Sherry, sex = 1, grade = 2015;
+A student named by Tom is erased.
+A student named by Jack is erased.
+A student named by Mary is erased.
+A student named by Sherry is erased.

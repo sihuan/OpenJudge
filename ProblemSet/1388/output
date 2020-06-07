@@ -1,0 +1,10 @@
+Copy constructor test output :
+There was a call to the copy constructor : 0,0,0
+There was a call to the copy constructor : 1,2,3
+
+Test data output :
+00:00:01
+00:59:59
+01:01:01
+23:00:00
+23:59:59

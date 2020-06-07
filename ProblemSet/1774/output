@@ -1,0 +1,6 @@
+Default constructor is called!
+Character a is created!
+ch1 is c and its ASCII code is 99.
+ch2 is a and its ASCII code is 97.
+Character a is erased!
+Character c is erased!

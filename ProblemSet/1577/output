@@ -1,0 +1,14 @@
+CREATE Date : (1000, 10, 10)
+COPY   Date : (1000, 10, 10)
+CREATE Time : (1, 1, 1)
+COPY   Time : (1, 1, 1)
+COPY   Time : (1, 1, 1)
+COPY   Date : (1000, 10, 10)
+CREATE DateTime : (1000, 10, 10) (1, 1, 1)
+COPY   Time : (1, 1, 1)
+COPY   Date : (1000, 10, 10)
+COPY   DateTime : (1000, 10, 10) (1, 1, 1)
+DateTime : 1000 10 10 1 1 1
+1982-10-01 00:00:00
+2000-02-28 23:59:59
+2014-07-02 13:30:01

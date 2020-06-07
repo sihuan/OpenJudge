@@ -1,16 +1,16 @@
 #include <stdio.h>
 #define OVERFLOW -1
 
-long long fbnq[100] = {1,1};
+long long fbnq[100] = { 1, 1 };
 int sx, t;
 
-void qfb(void)
+void qfb()
 {
-    int i=2;
+    int i = 2;
     long long dq;
-    while(1){
-        dq = fbnq[i-2] + fbnq[i-1];
-        if (dq<0){
+    while (1) {
+        dq = fbnq[i - 2] + fbnq[i - 1];
+        if (dq < 0) {
             sx = i;
             break;
         }
@@ -21,11 +21,11 @@ void qfb(void)
 
 long long fibonacci(int n)
 {
-    if(t==0){
+    if (t == 0) {
         qfb();
-        t=1;
+        t = 1;
     }
-    if(n<sx)
+    if (n < sx)
         return fbnq[n];
     else
         return -1;
