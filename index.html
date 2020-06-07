@@ -40,26 +40,28 @@
                     </div>
                 </div>
 
-                <div>
-                    <span v-html="problem"></span>
+                <div v-if="problem" class="mdui-card mdui-color-grey-100">
+                    <div class="mdui-card-content">
+                        <span class="mdui-typo" v-html="problem"></span>
+                    </div>
                 </div>
 
-                <div v-for='c in codes' class="mdui-card">
+                <div v-for='c in codes' class="mdui-card mdui-m-t-4">
                     <!-- 卡片的标题和副标题 -->
-                    <div class="mdui-card-primary">
+                    <div class="mdui-card-primary mdui-color-grey-200">
                         <div class="mdui-card-primary-title">{{ problemcode }}.{{ c.lang }}</div>
                         <div class="mdui-card-primary-subtitle">by {{ c.name }}</div>
                     </div>
 
                     <!-- 卡片的内容 -->
                     <div class="mdui-card-content">
-                        <pre><code v-html="c.code">
+                        <pre><code v-html="c.codehl">
                         </code></pre>
                     </div>
 
                     <!-- 卡片的按钮 -->
-                    <div class="mdui-card-actions">
-                        <button @click="copy(c.code)" class="mdui-btn mdui-ripple">Copy</button>
+                    <div class="mdui-card-actions mdui-color-grey-200">
+                        <button @click="copy(c.code)" class="mdui-btn mdui-ripple mdui-color-teal-300">Copy</button>
                         <!-- <button class="mdui-btn mdui-ripple">action 2</button> -->
                     </div>
 
@@ -83,12 +85,16 @@
             },
             methods: {
                 copy: function (code) {
-                    var aux = document.createElement("input");
-                    aux.setAttribute("value", code);
-                    document.body.appendChild(aux);
-                    aux.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(aux);
+                    let txa = document.createElement('textarea')
+                    txa.setAttribute('readonly', 'readonly')
+                    txa.value = code
+                    document.body.appendChild(txa)
+                    txa.select()
+                    let res = document.execCommand('copy')
+                    document.body.removeChild(txa)
+                    mdui.snackbar({
+                        message: 'Copyed!'
+                    });
                 },
                 search: function () {
                     // this.problem =''
@@ -109,7 +115,9 @@
                             .then((response => (this.codes.push({
                                 'name': one,
                                 'lang': 'c',
-                                'code': hljs.highlight('c-like', response.data).value
+                                'codehl': hljs.highlight('c-like', response.data)
+                                    .value,
+                                'code': response.data,
                             }))))
 
                     });
@@ -119,7 +127,9 @@
                             .then((response => (this.codes.push({
                                 'name': one,
                                 'lang': 'cc',
-                                'code': hljs.highlight('cpp', response.data).value
+                                'codehl': hljs.highlight('cpp', response.data)
+                                    .value,
+                                'code': response.data,
                             }))))
                     });
                 },
