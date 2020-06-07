@@ -1,48 +1,35 @@
-
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int a;
-    int c;
     int gcd(int, int);
-    int lcm(int, int, int);
-    scanf("%d%d", &a, &c);
-
-    int g;
-    g=gcd(a,c);
-    printf("%d %d", g, lcm(a, c, g));
+    int a, b;
+    int ans;
+    
+    scanf("%d%d", &a, &b);
+    ans=gcd(a, b);
+    printf("%d %d\n", ans, a/ans*b/ans*ans);
 
 
     return 0;
 }
 
-int gcd (int a, int b)
+int gcd(int m, int n)
 {
-    int t;
-    int gcd (int, int);
+    int gcd(int, int);
+    /*int t;
     if (a>b) {
         t=a;
         a=b;
         b=t;
-    }
+    }*/
+    if (n==0)
+        return m;
 
-    if (b==0)
-        return 0;
-    else if (a==0)
-        return b;
+    if (m%n==0)
+        return n;
     else
-        return gcd(a,b%a);
-}
-
-int lcm (int a, int b, int g)
-{
-    if (g==0)
-        return 0;
-    else if (a==0||b==0)
-        return a==0?b:a;
-    else
-        return (a/g)*(b/g)*g;
+        gcd(n, m%n);
 }
 
 /**************************************************************

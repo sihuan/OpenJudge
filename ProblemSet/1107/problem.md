@@ -8,7 +8,7 @@ Time Limit: 1 Sec  Memory Limit: 16 MB
 
 -----------------------------------------------------------------------------
 用C实现三个函数int_swap()、dbl_swap()、SWAP()，其中SWAP()是个带参宏。
-用C++实现两个函数，都以swap()命名。
+用C++实现两个函数，都以Swap()命名。
 以上函数的调用格式见“Append Code”。这里不给出函数原型，它们的参数请通过main()函数自行确定。
 
 
@@ -67,23 +67,23 @@ int main()
 ```cppint main()
 {
     int x1, y1;
-    
+     
     cin>>x1>>y1;
-    swap(&x1, &y1);
+    Swap(&x1, &y1);
     cout<<x1<<" "<<y1<<endl;
-    
+     
     cin>>x1>>y1;
-    swap(x1, y1);
+    Swap(x1, y1);
     cout<<x1<<" "<<y1<<endl;
-
+ 
     double x2, y2;
-    
+     
     cin>>x2>>y2;
-    swap(&x2, &y2);
+    Swap(&x2, &y2);
     cout<<x2<<" "<<y2<<endl;
-    
+     
     cin>>x2>>y2;
-    swap(x2, y2);
+    Swap(x2, y2);
     cout<<x2<<" "<<y2<<endl;
 }
 ```
