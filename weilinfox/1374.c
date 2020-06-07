@@ -1,28 +1,37 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <math.h>
+
 int main()
 {
-    char c[100],B[100];
-    int i=0,n;
-    scanf("%s",c);
-    n=strlen(c);
-    for(i=0;i<n;i++)
-    {
-    if(c[i]>='A'&&c[i]<='Z')
-       {
-           c[i]=155-c[i];
-       }
-        /*利用相加和的关系*/
-    if(c[i]>='a'&&c[i]<='z')
-        {
-            c[i]=219-c[i];
-        }
+    int n;
+    int i, j;
+    char ch;
+    int c[1005];
+    char to(char ch);
 
-
+    while ((ch=getchar())!='\n' && ch!=EOF) {
+        putchar(to(ch));
     }
 
-    printf("%s",c);
+    return 0;
+}
+
+char to (char c)
+{
+    int a;
+    if (isupper(c)) {
+        a=c-'A'+1;
+        return 'A'+26-a;
+    } else if(islower(c)) {
+        a=c-'a'+1;
+        return 'a'+26-a;
+    } else {
+        return c;
+    }
+
 }
 
 /**************************************************************
