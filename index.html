@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/mdui.min.css">
     <link rel="shortcut icon" href="./static/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
     <title>OpenJudge Search</title>
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
@@ -19,7 +20,8 @@
                 <span class="mdui-typo-title white-color">OpenJudge</span>
                 <div class="mdui-textfield search-textfield">
                     <i class="mdui-icon material-icons white-color">search</i>
-                    <input v-model="problemcode" class="mdui-textfield-input white-color search-input" type="text" placeholder="输入题号吧～～" />
+                    <input v-model="problemcode" class="mdui-textfield-input white-color search-input" type="text"
+                        placeholder="输入题号吧～～" />
                 </div>
                 <!-- <a href="https://github.com/Si-Huan/OpenJudge" class="mdui-btn mdui-btn-icon"><i
                         class="mdui-icon material-icons">chat_bubble_outline</i></a> -->
@@ -42,37 +44,37 @@
                         </div>
                     </div> -->
 
-                    <div v-if="problem" class="mdui-card mdui-color-grey-100">
-                        <div class="mdui-card-content">
-                            <span class="mdui-typo" v-html="problem"></span>
-                        </div>
+                <div v-if="problem" class="mdui-card mdui-color-grey-100">
+                    <div class="mdui-card-content">
+                        <span class="mdui-typo" v-html="problem"></span>
+                    </div>
+                </div>
+
+                <div v-for='c in codes' class="mdui-card mdui-m-t-4">
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary mdui-color-grey-200">
+                        <div class="mdui-card-primary-title">{{ c.pcode }}</div>
+                        <div class="mdui-card-primary-subtitle">by {{ c.name }}</div>
                     </div>
 
-                    <div v-for='c in codes' class="mdui-card mdui-m-t-4">
-                        <!-- 卡片的标题和副标题 -->
-                        <div class="mdui-card-primary mdui-color-grey-200">
-                            <div class="mdui-card-primary-title">{{ c.pcode }}</div>
-                            <div class="mdui-card-primary-subtitle">by {{ c.name }}</div>
-                        </div>
-
-                        <!-- 卡片的内容 -->
-                        <div class="mdui-card-content">
-                            <pre><code v-html="c.codehl">
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content">
+                        <pre><code v-html="c.codehl">
                         </code></pre>
-                        </div>
-
-                        <!-- 卡片的按钮 -->
-                        <div class="mdui-card-actions mdui-color-grey-200">
-                            <button @click="copy(c.code)" class="mdui-btn mdui-ripple copy-btn">Copy</button>
-                            <!-- <button class="mdui-btn mdui-ripple">action 2</button> -->
-                        </div>
-
                     </div>
 
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions mdui-color-grey-200">
+                        <button @click="copy(c.code)" class="mdui-btn mdui-ripple copy-btn">Copy</button>
+                        <!-- <button class="mdui-btn mdui-ripple">action 2</button> -->
+                    </div>
 
                 </div>
+
+
             </div>
         </div>
+    </div>
     </div>
 
     <script src="./static/js/mdui.min.js"></script>
@@ -107,7 +109,7 @@
 
 - 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
                 notfound1: "# 暂时还没有收录",
-                notfound2:`
+                notfound2: `
 
 > 如果你现在拥有这个题目的访问权限的话，欢迎贡献~
 
@@ -117,26 +119,26 @@
 
 - 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
             },
-            created: function() {
-            this.problem = marked(this.startmsg)
-        },
+            created: function () {
+                this.problem = marked(this.startmsg)
+            },
             watch: {
                 problemcode: function (newProblemcode, oldQProblemcode) {
-                    if(!newProblemcode.match(/^\d{0,4}$/)){
+                    if (!newProblemcode.match(/^\d{0,4}$/)) {
                         mdui.snackbar({
                             message: '请输入四位纯数字题号！！！',
-                            timeout:700,
+                            timeout: 700,
                         });
                     }
-                    this.problemcode = newProblemcode.replace(/[^\d]/g,'').substring(0, 4);
+                    this.problemcode = newProblemcode.replace(/[^\d]/g, '').substring(0, 4);
                     oldQProblemcode = oldQProblemcode.substring(0, 4);
-                    if(this.problemcode !== oldQProblemcode && newProblemcode.match(/^\d{4}$/)) {
+                    if (this.problemcode !== oldQProblemcode && newProblemcode.match(/^\d{4}$/)) {
                         this.search()
                         mdui.snackbar({
                             message: 'Searching!',
                             timeout: 700,
                         });
-                    }   
+                    }
                 },
             },
             methods: {
@@ -150,7 +152,7 @@
                     document.body.removeChild(txa)
                     mdui.snackbar({
                         message: 'Copyed!',
-                        timeout:700,
+                        timeout: 700,
                     });
                 },
                 search: function () {
@@ -160,14 +162,15 @@
                         .then(
                             (response => (this.problem = marked(response.data), this.status = response
                                 .status))
-                        ).catch((error => (this.status = error.response.status, this.problem = marked(this.notfound1+this.problemcode+this.notfoumd2))))
+                        ).catch((error => (this.status = error.response.status, this.problem = marked(this
+                            .notfound1 + this.problemcode + this.notfound2))))
 
                     this.we.forEach(one => {
                         url = this.baseurl + one + '/' + this.problemcode + '.c'
                         axios.get(url)
                             .then((response => (this.codes.push({
                                 'name': one,
-                                'pcode': this.problemcode +'.c',
+                                'pcode': this.problemcode + '.c',
                                 'lang': 'c',
                                 'codehl': hljs.highlight('c-like', response.data)
                                     .value,
@@ -184,7 +187,7 @@
                         axios.get(url)
                             .then((response => (this.codes.push({
                                 'name': one,
-                                'pcode': this.problemcode +'.cc',
+                                'pcode': this.problemcode + '.cc',
                                 'lang': 'cc',
                                 'codehl': hljs.highlight('cpp', response.data)
                                     .value,
