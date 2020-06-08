@@ -1,4 +1,8 @@
 # OpenJudge
+
+做了一个简单的前端页面，欢迎访问
+[OpenJudge Search](https://openjudge.sakuya.love)
+
 ### 简介
 收集 OJ 的题目  
 归档 AC 代码
