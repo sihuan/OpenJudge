@@ -1,0 +1,9 @@
+1
+3
+1 2 3
+4 5 6
+7 8 9
+3
+ADD LINE 0 0 2 (1,1)
+ADD MAX LINE 0 MIN ROW 1
+EXIT
