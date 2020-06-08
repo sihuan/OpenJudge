@@ -88,9 +88,34 @@
                 status: "0",
                 problemcode: '',
                 codes: [],
-                problem: "",
+                problem: marked(startmsg),
                 we: ['cutefox', 'cyd', 'czy', 'd6s3', 'fhy', 'rs_learner', 'sihuan', 'weilinfox', 'wfb', 'wpl'],
                 baseurl: "https://cdn.jsdelivr.net/gh/Si-Huan/OpenJudge@master/",
+                startmsg: `# 欢迎来到 OpenJudge
+
+> 我们收集了一些 OJ 题目和 AC 代码用于学习交流，一切权利属于原作者
+
+## 使用方式
+
+右上角输入 4 位数字题号就好啦。
+
+## 贡献
+
+> 如果你想贡献你可以访问的题目或者你的 AC 代码，可以点击下面的链接
+
+- 项目地址[OpenJudge](https://github.com/Si-Huan/OpenJudge)
+
+- 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
+                notfound1: "# 暂时还没有收录",
+                notfound2:`
+
+> 如果你现在拥有这个题目的访问权限的话，欢迎贡献~
+
+## 贡献方式
+
+- 项目地址[OpenJudge](https://github.com/Si-Huan/OpenJudge)
+
+- 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
             },
             watch: {
                 problemcode: function (newProblemcode, oldQProblemcode) {
@@ -132,7 +157,7 @@
                         .then(
                             (response => (this.problem = marked(response.data), this.status = response
                                 .status))
-                        ).catch((error => (this.status = error.response.status, this.problem = '')))
+                        ).catch((error => (this.status = error.response.status, this.problem = marked(this.notfound1+this.problemcode+this.notfoumd2))))
 
                     this.we.forEach(one => {
                         url = this.baseurl + one + '/' + this.problemcode + '.c'
