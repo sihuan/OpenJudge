@@ -11,9 +11,14 @@ pre{
     background-color: var(--color-blue);
 }
 
+.copy-btn:hover{
+    background-color: var(--color-blue);
+}
+
 .head-field{
     justify-content: space-between;
     background-color: var(--color-blue) !important;
+    align-items: center;
 }
 
 .search-textfield{

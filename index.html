@@ -94,7 +94,15 @@
             },
             watch: {
                 problemcode: function (newProblemcode, oldQProblemcode) {
-                    if (newProblemcode.length == 4) {
+                    if(!newProblemcode.match(/^\d{0,4}$/)){
+                        mdui.snackbar({
+                            message: '请输入四位纯数字题号！！！',
+                            timeout:700,
+                        });
+                    }
+                    this.problemcode = newProblemcode.replace(/[^\d]/g,'').substring(0, 4);
+                    oldQProblemcode = oldQProblemcode.substring(0, 4);
+                    if(this.problemcode !== oldQProblemcode && newProblemcode.match(/^\d{4}$/)) {
                         this.search()
                         mdui.snackbar({
                             message: 'Searching!',
