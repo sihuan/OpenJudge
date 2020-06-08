@@ -5,28 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/mdui.min.css">
-    <script src="./static/js/mdui.min.js"></script>
-    <script src="./static/js/vue.js"></script>
-    <!-- <script src="./static/js/axios.js"></script> -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="shortcut icon" href="./static/favicon.ico">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/default.min.css">
     <title>OpenJudge Search</title>
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body class="mdui-theme-primary-teal mdui-theme-accent-teal mdui-appbar-with-toolbar">
     <div id="app">
         <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-m-b-5">
-            <div class="mdui-toolbar mdui-color-teal-100">
+            <div class="mdui-toolbar head-field">
                 <!-- <div class="mdui-toolbar-spacer"></div> -->
-                <span class="mdui-typo-title">OpenJudge</span>
-                <div class="mdui-toolbar-spacer"></div>
-                <div class="mdui-textfield">
-                    <i class="mdui-icon material-icons">search</i>
-                    <input v-model="problemcode" class="mdui-textfield-input" type="text" placeholder="输入题号吧～～" />
+                <span class="mdui-typo-title white-color">OpenJudge</span>
+                <div class="mdui-textfield search-textfield">
+                    <i class="mdui-icon material-icons white-color">search</i>
+                    <input v-model="problemcode" class="mdui-textfield-input white-color search-input" type="text" placeholder="输入题号吧～～" />
                 </div>
                 <!-- <a href="https://github.com/Si-Huan/OpenJudge" class="mdui-btn mdui-btn-icon"><i
                         class="mdui-icon material-icons">chat_bubble_outline</i></a> -->
@@ -70,7 +63,7 @@
 
                         <!-- 卡片的按钮 -->
                         <div class="mdui-card-actions mdui-color-grey-200">
-                            <button @click="copy(c.code)" class="mdui-btn mdui-ripple mdui-color-teal-300">Copy</button>
+                            <button @click="copy(c.code)" class="mdui-btn mdui-ripple copy-btn">Copy</button>
                             <!-- <button class="mdui-btn mdui-ripple">action 2</button> -->
                         </div>
 
@@ -82,6 +75,12 @@
         </div>
     </div>
 
+    <script src="./static/js/mdui.min.js"></script>
+    <script src="./static/js/vue.js"></script>
+    <!-- <script src="./static/js/axios.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         app = new Vue({
             el: "#app",

@@ -1,0 +1,35 @@
+body{
+    --color-blue: #4C98F7;
+}
+
+pre{
+    overflow: scroll;
+}
+
+.copy-btn{
+    color: #fff !important;
+    background-color: var(--color-blue);
+}
+
+.head-field{
+    justify-content: space-between;
+    background-color: var(--color-blue) !important;
+}
+
+.search-textfield{
+    flex: 1;
+    max-width: 300px;
+}
+
+.white-color{
+    color: #fff !important;
+}
+
+.search-input{
+    border-bottom: 1px solid #fff;
+}
+
+.search-input:hover{
+    border-bottom: 1px solid #eee !important;
+    box-shadow: none !important;
+}
