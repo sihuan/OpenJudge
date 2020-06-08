@@ -88,7 +88,7 @@
                 status: "0",
                 problemcode: '',
                 codes: [],
-                problem: marked(startmsg),
+                problem: "",
                 we: ['cutefox', 'cyd', 'czy', 'd6s3', 'fhy', 'rs_learner', 'sihuan', 'weilinfox', 'wfb', 'wpl'],
                 baseurl: "https://cdn.jsdelivr.net/gh/Si-Huan/OpenJudge@master/",
                 startmsg: `# 欢迎来到 OpenJudge
@@ -117,6 +117,9 @@
 
 - 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
             },
+            created: function() {
+            this.problem = marked(this.startmsg)
+        },
             watch: {
                 problemcode: function (newProblemcode, oldQProblemcode) {
                     if(!newProblemcode.match(/^\d{0,4}$/)){
