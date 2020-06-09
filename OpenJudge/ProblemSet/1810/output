@@ -1,0 +1,12 @@
+numOfShapes = 0, numOfCircles = 0, numOfSquares = 0
+A shape is created!
+A circle is created!
+Area = 3.80
+A circle is erased!
+A shape is erased!
+A shape is created!
+A square is created!
+Area = 5.48
+A square is erased!
+A shape is erased!
+numOfShapes = 2, numOfCircles = 1, numOfSquares = 1

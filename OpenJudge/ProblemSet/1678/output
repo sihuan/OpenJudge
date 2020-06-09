@@ -1,0 +1,11 @@
+Construct Square (4)
+A Square length 4, Perimeter 16, Area 16
+=========================
+Construct Square (3)
+Construct Rectangle (3, 4)
+A Rectangle length 3, width 4, Perimeter 14, Area 12
+=========================
+Construct Square (3)
+Construct Rectangle (3, 4)
+Construct Cuboid (3, 4, 6)
+A Cuboid length 3, width 4, height 6, Perimeter 52, Area 108, Volume 72

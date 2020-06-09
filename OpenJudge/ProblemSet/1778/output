@@ -1,0 +1,36 @@
+The Point (0, 0) is created! Now, we have 1 points.
+The Point (1, 1) is created! Now, we have 2 points.
+A circle at (1, 1) and radius 1 is created! Now, we have 1 circles.
+We have 2 points and 1 circles now.
+The Point (0, 0) is created! Now, we have 3 points.
+A Point (0, 0) is copied! Now, we have 4 points.
+A Point (0, 0) is copied! Now, we have 5 points.
+A circle at (0, 0) and radius 10 is created! Now, we have 2 circles.
+A Point (0, 0) is erased! Now, we have 4 points.
+The Point (2, 2) is created! Now, we have 5 points.
+(2, 2) is in the circle at (0, 0).
+The Point (11, 11) is created! Now, we have 6 points.
+(11, 11) is not in the circle at (0, 0).
+The Point (10, 0) is created! Now, we have 7 points.
+(10, 0) is not in the circle at (0, 0).
+A Point (0, 0) is erased! Now, we have 6 points.
+A circle at (0, 0) and radius 10 is erased! Now, we have 1 circles.
+A Point (0, 0) is erased! Now, we have 5 points.
+The Point (1, 1) is created! Now, we have 6 points.
+A Point (1, 1) is copied! Now, we have 7 points.
+A Point (1, 1) is copied! Now, we have 8 points.
+A circle at (1, 1) and radius 20 is created! Now, we have 2 circles.
+A Point (1, 1) is erased! Now, we have 7 points.
+The Point (2, 2) is created! Now, we have 8 points.
+(2, 2) is in the circle at (1, 1).
+The Point (1, 1) is created! Now, we have 9 points.
+(1, 1) is in the circle at (1, 1).
+The Point (100, 100) is created! Now, we have 10 points.
+(100, 100) is not in the circle at (1, 1).
+A Point (1, 1) is erased! Now, we have 9 points.
+A circle at (1, 1) and radius 20 is erased! Now, we have 1 circles.
+A Point (1, 1) is erased! Now, we have 8 points.
+We have 8 points, and 1 circles.
+A circle at (1, 1) and radius 1 is erased! Now, we have 0 circles.
+A Point (1, 1) is erased! Now, we have 7 points.
+A Point (0, 0) is erased! Now, we have 6 points.

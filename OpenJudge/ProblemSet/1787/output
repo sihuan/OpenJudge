@@ -1,0 +1,8 @@
+vect+vec2	n*vec1	vec1*vec2
+2i+2j+2k	3i+3j+3k	0
+4i+4j+4k	4i+8j+12k	-4i+8j-4k
+-4i-4j-4k	-10i-20j-30k	-4i+8j-4k
+4j+6k	5i+10j+15k	-6j+4k
+2i+6k	6i+12j+18k	12i-4k
+2i+4j	9i+18j+27k	-12i+6j
+0	5i+10j+15k	0
