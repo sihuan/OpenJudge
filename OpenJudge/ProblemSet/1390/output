@@ -1,0 +1,12 @@
+Constant test output :
+00:00:00
+01:02:03
+Time error
+
+Test data output :
+00:00:01
+00:59:59
+Time error
+23:00:00
+23:59:59
+Time error
