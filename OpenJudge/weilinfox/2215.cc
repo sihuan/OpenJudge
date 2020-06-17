@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
+#include <typeinfo>
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -8,15 +9,14 @@
 
 using namespace std;
 
+
 class Time {
 public:
-    int h, s, m;
-    Time (int a, int b, int c):h(a), m(b), s(c) {}
-    int operator - (Time& t) {
-        return abs((h-t.h)*3600 + (m-t.m)*60 + s-t.s);
-    }
-};
+    Time (int h=0, int m=0, int s=0): h(h), m(m), s(s) {}
+    int operator - (Time& t) {return abs((t.h - h)*3600 + (t.m - m)*60 + (t.s - s));}
 
+    int h, m, s;
+};
 int main()
 {
     int a, b, c;
