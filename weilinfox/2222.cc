@@ -1,34 +1,28 @@
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
+#include <typeinfo>
 #include <string>
+#include <vector>
+#include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
 class Date {
-        int y, m, d;
 public:
-        Date (int yy = 0, int mm = 0, int dd = 0):y(yy), m(mm), d(dd) {
-                cout << "Date " << y << "-" << m << "-" << d << " is created." << endl;
-        }
-        ~Date () {
-                cout << "Date " << y << "-" << m << "-" << d << " is erased." << endl;
-        }
-        friend class Person;
+    Date (int y, int m, int d):y(y), m(m), d(d) {cout << "Date " <<y << "-" << m << "-" << d << " is created." << endl;}
+    ~Date () {cout << "Date " << y << "-" << m << "-" << d << " is erased." << endl;}
+    int y, m, d;
 };
 
 class Person {
-        Date day;
-        string name;
 public:
-        Person (int y, int m, int d, string n):day(y, m, d), name(n) {
-                cout << "Person " << name << " was born at " << day.y << "-" << day.m << "-" << day.d << " is created." << endl;
-        }
-        ~Person () {
-                cout << "Person " << name << " was born at " << day.y << "-" << day.m << "-" << day.d << " is erased." << endl;
-        }
+    Person (int y, int m, int d, string n):dt(y, m, d), n(n) {cout <<"Person " << n << " was born at " << y << "-" << m << "-" << d << " is created." << endl;}
+    ~Person () {cout <<"Person " << n << " was born at " << dt.y << "-" << dt.m << "-" << dt.d << " is erased." << endl;}
+    Date dt;
+    string n;
 };
-
-
 
 
 int main()

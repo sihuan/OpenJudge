@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
+#include <typeinfo>
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -9,17 +10,15 @@
 using namespace std;
 
 class Cup {
-    int vol;
 public:
-    Cup (int v=0):vol(v) {cout << "A cup of " << vol <<\
-        " ml is created." << endl;}
-    Cup (Cup& c):vol(c.getv()) {cout << "A cup of " << vol \
-        <<" ml is copied." << endl;}
-    ~Cup() {cout << "A cup of " << vol \
-        << " ml is erased." << endl;}
-    int getv () {return vol;}
-    void setVolume (int s) {vol = s;}
+    Cup (int c=0):vol(c) {cout << "A cup of " << vol << " ml is created." << endl;}
+    Cup (Cup& c):vol(c.vol) {cout << "A cup of " << vol << " ml is copied." << endl;}
+    ~Cup () {cout << "A cup of " << vol << " ml is erased." << endl;}
+    void setVolume(int v) {vol = v;}
+
+    int vol;
 };
+
 int main()
 {
     Cup c1;
