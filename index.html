@@ -120,7 +120,8 @@
 - 联系我们 [鹅群](https://jq.qq.com/?_wv=1027&k=9EwnV9uu)`,
             },
             created: function () {
-                this.problem = marked(this.startmsg)
+                this.problem = marked(this.startmsg);
+		this.problemcode = window.location.search.substring(1);
             },
             watch: {
                 problemcode: function (newProblemcode, oldQProblemcode) {
