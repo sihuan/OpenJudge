@@ -1,4 +1,0 @@
-Default constructor is called to make a = 0, c = '0'.
-First constructor is called to make a = 10, c = '0'.
-Second constructor is called to make a = 0, c = 'a'.
-Third constructor is called to make a = 10, c = 'a'.

@@ -1,8 +1,0 @@
-Person age = 18, sex = f is created.
-Student of class 1 is created.
-Student of class 1 is erased.
-Person age = 18, sex = f is erased.
-Person age = 35, sex = m is created.
-Teacher with salary 8001 is created.
-Teacher with salary 8001 is erased.
-Person age = 35, sex = m is erased.
