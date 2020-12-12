@@ -38,3 +38,11 @@ pre{
     border-bottom: 1px solid #eee !important;
     box-shadow: none !important;
 }
+
+.mdui-theme-accent-teal .mdui-typo a{
+    color: var(--color-blue) !important;
+}
+
+.mdui-theme-accent-teal .mdui-typo a:before{
+    background-color: var(--color-blue) !important;
+}
