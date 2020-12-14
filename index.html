@@ -173,7 +173,7 @@
             },
             search: function () {
                 this.codes = []
-                document.title = 'Problem ' + problemcode;
+                document.title = 'Problem ' + this.problemcode;
                 axios.get(this.baseurl + 'ProblemSet/' + this.problemcode + '/' + 'problem.md')
                     .then(
                         (response => (this.problem = marked(response.data), this.status = response
