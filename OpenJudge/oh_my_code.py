@@ -88,7 +88,7 @@ def main(arg):
         name = input('Your username:')
         ck = input('PHPSESSID=')
         ck = 'PHPSESSID=' + ck
-    path = name
+    path = f'QuestionAns/{name}'
     mkdir(path)
     for lan in ['c', 'c++']:
         codeUrls = getCodeUrl(sid, ck, lan)
