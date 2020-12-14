@@ -2,15 +2,15 @@
 <html lang="zh-hans">
 
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180183825-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-180183825-1');
-</script>
+    <meta property="og:title" content="Home" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180183825-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-180183825-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/css/mdui.min.css">
@@ -23,6 +23,9 @@
 
 <body class="mdui-theme-primary-teal mdui-theme-accent-teal mdui-appbar-with-toolbar">
     <div id="app"></div>
+    <script src="https://utteranc.es/client.js" repo="Si-Huan/OpenJudge" issue-term="title" label="Utterances"
+        theme="github-light" crossorigin="anonymous" async>
+        </script>
 </body>
 
 <script src="./static/js/mdui.min.js"></script>
@@ -170,7 +173,7 @@
             },
             search: function () {
                 this.codes = []
-
+                document.title = 'Problem ' + problemcode;
                 axios.get(this.baseurl + 'ProblemSet/' + this.problemcode + '/' + 'problem.md')
                     .then(
                         (response => (this.problem = marked(response.data), this.status = response
