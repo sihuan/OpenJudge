@@ -1,8 +1,2 @@
-*.o
-*.out
-pout
-gout
-OpenJudge/rawoj
-ProblemSet/sdutacm
-OpenJudge/sdutpro.py
-venv
+.vscode
+env
