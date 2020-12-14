@@ -199,7 +199,7 @@
 
                 });
                 this.we.forEach(one => {
-                    url = this.baseurl + one + '/' + this.problemcode + '.cc'
+                    url = this.baseurl + 'QuestionAns/' + one + '/' + this.problemcode + '.cc'
                     axios.get(url)
                         .then((response => (this.codes.push({
                             'name': one,
