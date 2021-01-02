@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 from lxml import etree
 import sys
 import requests
@@ -45,7 +46,7 @@ def mkProblem(url,ck):
         except:
             return 0
         path = './ProblemSet/' + id
-        print("更新" + path)
+        print("Update" + path)
         mkdir(path)
         tt = tt[:len(tt)-31]
         # print(tt)

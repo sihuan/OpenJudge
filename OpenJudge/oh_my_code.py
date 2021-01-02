@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 from lxml import etree
 import sys
 import requests
@@ -72,7 +73,7 @@ def mkCode(url, ck, path,lan):
 		elif lan == 'c++':
 			ex = '.cc'
 		filename = path + '/' + pid + ex
-		print('更新' + filename)
+		print('Update' + filename)
 		codefile = open(filename, 'w')
 		codefile.write(cd)
 		codefile.close()
