@@ -25,6 +25,6 @@ gcc *code*.c -o *exec*
 1. 注册 Github 账号
 2. Fork 本仓库到自己的账号
 3. 克隆你 Fork 的仓库到本地
-4. 添加题目或题解或笔记,参见 [start.md](https://github.com/Si-Huan/OpenJudge/blob/master/Start/start.md)
+4. 添加题目或题解或笔记,参见 [start.md](https://github.com/sihuan/OpenJudge/blob/master/Start/start.md)
 5. 提交、Push
 6. 提交 PR ，等待合并
