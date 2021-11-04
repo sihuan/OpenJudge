@@ -33,7 +33,7 @@
 <!-- <script src="./static/js/axios.js"></script> -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>
 <script>
     app = new Vue({
         el: "#app",
@@ -135,7 +135,7 @@
         </div>
         `,
         created: function () {
-            this.problem = marked(this.startmsg);
+            this.problem = marked.marked(this.startmsg);
             this.problemcode = window.location.search.substring(1);
         },
         watch: {
@@ -176,9 +176,9 @@
                 document.title = 'Problem ' + this.problemcode;
                 axios.get(this.baseurl + 'ProblemSet/' + this.problemcode + '/' + 'problem.md')
                     .then(
-                        (response => (this.problem = marked(response.data), this.status = response
+                        (response => (this.problem = marked.marked(response.data), this.status = response
                             .status))
-                    ).catch((error => (this.status = error.response.status, this.problem = marked(this
+                    ).catch((error => (this.status = error.response.status, this.problem = marked.marked(this
                         .notfound1 + this.problemcode + this.notfound2))))
 
                 this.we.forEach(one => {
