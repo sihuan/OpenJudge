@@ -1,4 +1,4 @@
-# A+B Problem (VIII) : Pointer Practice (Append Code)
+# A+B Problem (X) : Pointer Practice (Append Code)
 Time Limit: 1 Sec  Memory Limit: 2 MB
 
 

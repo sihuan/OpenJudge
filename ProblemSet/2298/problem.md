@@ -8,7 +8,7 @@ Time Limit: 1 Sec  Memory Limit: 2 MB
 编写一个函数add()。函数原型为
       int add(int n);
       功能：函数读入a和b的值，并输出a+b。用递归的方法编写，n是递归的次数。
-函数put_sum()的调用格式见“Append Code”。
+函数add()的调用格式见“Append Code”。
 -----------------------------------------------------------------------------
 Invalid Word（禁用单词）错误：在解决这个题目时，某些关键词是不允许被使用的。如果提交的程序中包含了下列的关键词之一，就会产生这个错误。
 被禁用的关键字：for, while, do, break, continue, goto。
