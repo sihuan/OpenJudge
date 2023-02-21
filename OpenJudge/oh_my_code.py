@@ -17,13 +17,13 @@ def mkdir(path):
 
 
 def getCodeUrl(sid, ck, lan):
-	heder = {"Cookie": ck}
+	heder = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36","Cookie": ck}
 	urls = []
 	if lan == 'c':
 		codelan = '&language=0'
 	elif lan == 'c++':
 		codelan = '&language=1'
-	url = 'http://cise.sdust.edu.cn/OJ/status.php?user_id=' + sid + codelan + '&jresult=4'
+	url = 'http://192.168.119.211/JudgeOnline/status.php?user_id=' + sid + codelan + '&jresult=4'
 	# print(url)
 	res = requests.get(url=url, headers=heder)
 	# time.sleep(0.2)
@@ -32,7 +32,7 @@ def getCodeUrl(sid, ck, lan):
 	t = html.xpath('//*[@id="main"]//td[7]/a[1]/@href')
 	# print(str(t))
 	urls.extend(t)
-	nexturl = 'http://cise.sdust.edu.cn/OJ/' + html.xpath('//*[@id="main"]/a[3]/@href')[0]
+	nexturl = 'http://192.168.119.211/JudgeOnline/' + html.xpath('//*[@id="main"]/a[3]/@href')[0]
 	# print(nexturl)
 	# return 0
 	while True:
@@ -43,7 +43,7 @@ def getCodeUrl(sid, ck, lan):
 		t = html.xpath('//*[@id="main"]//td[7]/a[1]/@href')
 		# print(str(t))
 		urls.extend(t)
-		nexturl = 'http://cise.sdust.edu.cn/OJ/' + html.xpath('//*[@id="main"]/a[3]/@href')[0]
+		nexturl = 'http://192.168.119.211/JudgeOnline/' + html.xpath('//*[@id="main"]/a[3]/@href')[0]
 		# print(nexturl)
 		if nexturl == url:
 			break
@@ -54,7 +54,7 @@ def getCodeUrl(sid, ck, lan):
 
 def mkCode(url, ck, path,lan):
 	heder = {"Cookie": ck}
-	codeurl = 'http://cise.sdust.edu.cn/OJ/' + url
+	codeurl = 'http://192.168.119.211/JudgeOnline/' + url
 	# print(codeurl)
 	coderes = requests.get(url=codeurl, headers=heder)
 	codehtml = etree.HTML(coderes.content.decode("utf-8"))

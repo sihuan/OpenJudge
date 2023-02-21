@@ -1,4 +1,4 @@
-# 用结构体来表示数组
+# 用结构体来表示数组(Append Code)
 Time Limit: 1 Sec  Memory Limit: 128 MB
 
 

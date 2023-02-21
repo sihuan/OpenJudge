@@ -1,5 +1,5 @@
 # 梅森素数
-Time Limit: 12 Sec  Memory Limit: 16 MB
+Time Limit: 15 Sec  Memory Limit: 16 MB
 
 
 ## Description

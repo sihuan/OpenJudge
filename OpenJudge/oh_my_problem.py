@@ -13,7 +13,7 @@ def mkdir(path):
 		return 1
 
 def getCon():
-	url = 'http://cise.sdust.edu.cn/OJ/contest.php'
+	url = 'http://192.168.119.211/JudgeOnline/contest.php'
 	res = requests.get(url=url)
 	html = etree.HTML(res.content.decode("utf-8"))
 	con = html.xpath('//center[1]/tr/td[1]/text()')
@@ -21,7 +21,7 @@ def getCon():
 	
 def getProNum(con,ck):
 	heder = {"Cookie": ck}
-	url = 'http://cise.sdust.edu.cn/OJ/contest.php?cid=' + con
+	url = 'http://192.168.119.211/JudgeOnline/contest.php?cid=' + con
 	res = requests.get(url=url,headers=heder)
 	html = etree.HTML(res.content.decode("utf-8"))
 	urls = html.xpath('//center/table/tr/td/a/@href')
@@ -32,7 +32,7 @@ def mkProblem(url,ck):
         ttt = ''
         sin = ''
         sout = ''
-        url = 'http://cise.sdust.edu.cn/OJ/' + url
+        url = 'http://192.168.119.211/JudgeOnline/' + url
         siflag = False
         soflag = False
         heder = {
@@ -82,7 +82,7 @@ def mkProblem(url,ck):
                 ttt = ttt + '\n\n## ' + tt[i] + '\n'
                 continue
             elif tt[i] in ['append.c'] and i>len(tt)-4:
-                codeurl = 'http://cise.sdust.edu.cn/OJ/append_detail.php?lang=0&pid=' + id
+                codeurl = 'http://192.168.119.211/JudgeOnline/append_detail.php?lang=0&pid=' + id
                 # print(codeurl)
                 coderes = requests.get(url=codeurl)
                 codehtml = etree.HTML(coderes.content.decode("utf-8"))
@@ -98,7 +98,7 @@ def mkProblem(url,ck):
             elif tt[i] == ', ':
                 continue
             elif tt[i] in ['append.cc'] and i>len(tt)-2:
-                codeurl = 'http://cise.sdust.edu.cn/OJ/append_detail.php?lang=1&pid=' + id
+                codeurl = 'http://192.168.119.211/JudgeOnline/append_detail.php?lang=1&pid=' + id
                 # print(codeurl)
                 coderes = requests.get(url=codeurl)
                 codehtml = etree.HTML(coderes.content.decode("utf-8"))

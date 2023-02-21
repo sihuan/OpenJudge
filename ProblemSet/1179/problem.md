@@ -1,5 +1,5 @@
 # 筛选素数
-Time Limit: 1 Sec  Memory Limit: 16 MB
+Time Limit: 2 Sec  Memory Limit: 16 MB
 
 
 ## Description
